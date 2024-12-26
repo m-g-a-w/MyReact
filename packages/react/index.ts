@@ -1,4 +1,4 @@
-import { createElement } from 'react';
+import createElement from 'react';
 import { jsx } from './src/jsx';
 
 export default {

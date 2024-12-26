@@ -9,7 +9,8 @@ const ReactElement = function (
 	props: Props
 ): ReactElementType {
 	const element = {
-		$$type: REACT_ELEMENT_TYPE,
+		$$typeof: REACT_ELEMENT_TYPE,
+		type,
 		key,
 		ref,
 		props,
@@ -18,7 +19,7 @@ const ReactElement = function (
 	return element;
 };
 
-export const jsx = (type: ReactElement, config: any, ...maybeChildren: any) => {
+export const jsx = (type: Type, config: any, ...maybeChildren: any) => {
 	let key: Key = null;
 	const props: Props = {};
 	let ref: Ref = null;

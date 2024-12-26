@@ -4,10 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build:dev": "rm -rf dist && rollup --config scripts/rollup/dev.config.js",
-		"demo": "vite serve demos/performance --config scripts/vite/vite.config.js --force",
-		"lint": "eslint --ext .js,.ts,.jsx,.tsx --fix --quiet ./packages",
-		"test": "jest --config scripts/jest/jest.config.js"
+		"build:dev": "rimraf dist && rollup --bundleConfigAsCjs --config scripts/rollup/react.config.js",
+		"lint": "eslint --ext .js,.ts,.jsx,.tsx --fix --quiet ./packages"
 	},
 	"keywords": [],
 	"author": "",
